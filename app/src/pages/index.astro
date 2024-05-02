@@ -1,0 +1,19 @@
+---
+import Background from "../components/Background.astro";
+import Body from "../components/Body.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import { Testimonials } from "../components/Testimonials";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="relative w-[375px] lg:w-[1440px] max-w-[1440px]">
+    <Background>
+      <Header />
+      <Hero />
+      <Body />
+      <Testimonials client:load />
+    </Background>
+  </main>
+</Layout>
